@@ -1,33 +1,58 @@
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  @tailwind components;
+  @tailwind utilities;
+  
+  .counter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Space from the previous element */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.counter-button {
+    font-size: 16px;
+    width: 40px; /* Width of the button */
+    height: 40px; /* Height of the button */
+    line-height: 40px; /* Align text in the center vertically */
+    text-align: center;
+    background-color: #f97316; /* Button background color */
+    color: white;
+    border: none;
+    border-radius: 50%; /* Circular buttons */
+    cursor: pointer;
+    margin: 0 10px; /* Space between the buttons and the number */
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.counter-display {
+    min-width: 40px; /* Minimum width of the number display */
+    text-align: center;
+    font-size: 18px;
+    color: #333;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.tagline-main{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px; /* Adjust size as needed */
 }
+
+.tagline-container {
+  display: flex;
+  flex-direction: column;
+  font-size: 24px; /* Adjust size as needed */
+  font-weight: bold;
+  color: white;
+}
+
+.second-word {
+  display: inline-block;
+  width: 200px;
+  background-color: #f97316; /* Background of the flipping word */
+  padding: 0 7px; /* Padding inside the flipping word box */
+  border-radius: 5px; /* Rounded corners of the background */
+  transition: all 0.3s ease-in-out; /* Smooth transition for changes */
+}
+
+
